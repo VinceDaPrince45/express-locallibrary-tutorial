@@ -28,9 +28,15 @@
             </div>
             <div class="col-sm-10">
               <% if (title == "Local Library Home") { %>
-                <%- include('index') %>
+                <%- include('home') %>
               <% } else if (title == "Book List") { %>
                 <%- include('book_list') %>
+              <% } else if (title == "Book Instance List") { %>
+                <%- include('bookinstance_list') %>
+              <% } else if (title == "Author List") { %>
+                <%- include('author_list') %>
+              <% } else if (title == "Genre List") { %>
+                <%- include("genre_list") %>
               <% } %>
             </div >
         </div>
