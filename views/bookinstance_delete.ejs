@@ -19,7 +19,11 @@
     <p><strong>Due back:</strong> <%= bookinstance.due_back_formatted %></p>
 <% } %>
 
-<hr>
-<p>
-    <a href="<%= bookinstance.url %>/delete">Delete book</a>
-</p>
+<p>Do you really want to delete this book?</p>
+
+<form method="POST">
+<div class="form-group">
+    <input id="bookinstanceid" class="form-control" type="hidden" name="bookinstance_id" value="<%= bookinstance._id %>">
+</div>
+<button class="btn btn-primary" type="submit">Delete</button>
+</form>

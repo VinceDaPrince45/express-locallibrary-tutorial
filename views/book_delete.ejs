@@ -1,5 +1,7 @@
 <h1><%= title %>: <%= book.title %></h1>
-<p><%= book.summary %></p>
+<p><strong>Author: </strong>
+    <a href="<%= book.author.url %>"><%= book.author.name %></a>
+</p>
 
 <% if (bookinstances.length > 0) { %>
   <p><strong>Delete the following book instances before attempting to delete this book.</strong></p>
