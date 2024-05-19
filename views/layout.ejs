@@ -53,6 +53,10 @@
                 <%- include("book_form") %>
               <% } else if (title == "Create BookInstance") { %>
                 <%- include("bookinstance_form") %>
+              <% } else if (title == "Delete Author") { %>
+                <%- include("author_delete") %>
+              <% } else if (title == "Delete Book") { %>
+                <%- include("book_delete") %>
               <% } %>
             </div >
         </div>
