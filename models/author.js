@@ -30,6 +30,16 @@ AuthorSchema.virtual("date_of_death_formatted").get(function () {
     return this.date_of_death ? DateTime.fromJSDate(this.date_of_death).toLocaleString(DateTime.DATE_MED) : '';
 });
 
+// Virtual for formatted date of birth
+AuthorSchema.virtual('date_of_birth_form').get(function() {
+    return this.date_of_birth ? this.date_of_birth.toISOString().split('T')[0] : '';
+  });
+  
+  // Virtual for formatted date of death
+  AuthorSchema.virtual('date_of_death_form').get(function() {
+    return this.date_of_death ? this.date_of_death.toISOString().split('T')[0] : '';
+  });
+
 AuthorSchema.virtual("lifespan").get(function () {
     return `${this.date_of_birth_formatted} - ${this.date_of_death_formatted}`;
 });
